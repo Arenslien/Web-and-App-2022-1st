@@ -1,54 +1,125 @@
-<html>
+<!DOCTYPE html>
+<html lang="kr">
   <head>
-    <title>22 정성훈 CGI FORM</title>
-    <script language="JavaScript" src="22_java.js">
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22_정성훈</title>
+
+    <!-- Bootstrap CSS 사용 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- 폰트 추가 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <!-- 도현 폰트 -->
+    <style>
+      DOHYEON {
+        font-family: 'Do Hyeon', sans-serif;
+      }
+    </style>
+
   </head>
   <body>
-    <b>텍스트 입력상자</b><hr>
-    학번을 입력하세요 :
-    <input type="text" name="number"><br>
-    이름을 입력하세요 :
-    <input type="text" name="username"><br>
-    id를 입력하세요 : 
-    <input type="text" maxlength="8" name="id"><br>
-    pw를 입력하세요 : 
-    <input type="password" name="passwd" size="10"><br><br>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Arenslien</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="22_link.html">LINK</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                INTRODUCE
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="22_im.html">I'm...</a></li>
+                <li><a class="dropdown-item" href="22_time.html">Time</a></li>
+                <li><a class="dropdown-item" href="22_album.html">ALBUM</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
 
-    <b>내부 스크립트</b><br>
-    <script language="JavaScript">
-      document.write("여기는 body내 자바스크립트");
-    </script><br><br>
+    <!-- Carousel Start -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/명지MCC.jpg" class="d-block w-100" style="max-height: 450px" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="badge bg-primary text-wrap" style="width: 11rem;">
+              <h5><DOHYEON>명지MCC</DOHYEON></h5>
+            </div>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/방목학술정보관.jpg" class="d-block w-100" style="max-height: 450px" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="badge bg-primary text-wrap" style="width: 6rem;">
+              <h5>
+                <DOHYEON>방목학술정보관</DOHYEON>
+              </h5>
+            </div>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/인문_베리스타홀.jpg" class="d-block w-100" style="max-height: 450px" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="badge bg-primary text-wrap" style="width: 6rem;">
+              <h5>
+                <DOHYEON>인문_베리스타홀</DOHYEON>
+              </h5>
+            </div>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Carousel End -->
 
-    <b>외부 스크립트</b><br>
-    <button type="button" onclick="test22()">외부</button><br><br>
 
-    <b>인라인 스크립트</b><br>
-    <hr color="red">
-    <a href="JavaScript:alert('환영합니다.')">경고 메시지</a>
 
-    <!-- 주석 연습 -->
-    <script language="JavaScript">
-      document.write("홈페이지<br>"); // 메시지 나타내기
-      // 해당 텍스트는 주석 처리 됨.
-      document.write("body 태그에 자바스크립트 넣기<br>");
-      /*
-        자바스크립트의 주석 넣기 연습
-        여러 줄 주석 처리 가능
-      */
-    </script>
-
-    <script language="JavaScript">
-      for (i=0; i<7; i++) {
-        document.write("<font size=",i,"> 어서오세요.</font><br>");
-      }
-    </script>
-
-    <script language="JavaScript">
-      busy = "바쁨"
-      document.write("<b>당신은" + busy + "니까?</><br>");
-      if (busy == "바쁨") document.write(busy + ": 지하철을 타세요");
-      if (busy == "안바쁨") document.write(busy + ": 버스를 타세요");
-    </script>
+    <!-- Bootstrap 번들 사용 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
